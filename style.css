@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #1e1e3f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  background-color: #14142b;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.logo .highlight {
+  color: #00ffff;
+}
+
+/* Nav Links */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+.nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+  position: relative;
+}
+.nav a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #00ffff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.nav a:hover {
+  color: #00ffff;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  margin: 60px 0 30px;
+  font-size: 32px;
+  color: #00ffff;
+}
+
+/* Pricing Layout */
+.pricing-section {
+  padding: 40px 20px;
+}
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Cards */
+.pricing-card {
+  width: 250px;
+  height: 400px;
+  background: #14142b;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.1);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pricing-card:hover {
+  transform: translateY(-10px);
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 30px rgba(0,255,255,0.3);
+}
+.featured {
+  background-color: #008b8b;
+}
+
+/* Plan Text */
+.plan-name {
+  text-align: center;
+  font-size: 22px;
+  color: #00ffff;
+}
+.price {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.price span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* Features */
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.tick::before {
+  content: "\2714";
+  color: #00ff7f;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Button */
+.select-btn {
+  background: #00ffff;
+  color: #14142b;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.select-btn:hover {
+  background: #00e6e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
